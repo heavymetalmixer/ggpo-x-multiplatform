@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "/bin/x86/Debug/libGGPO.dll"
+  "/bin/x86/Debug/libGGPO.dll.manifest"
+  "/bin/x86/Debug/libGGPO.pdb"
+  "/lib/x86/Debug/libGGPO.dll.a"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/p2p.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/p2p.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/spectator.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/spectator.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/synctest.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/backends/synctest.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/bitvector.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/bitvector.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/game_input.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/game_input.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/input_queue.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/input_queue.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/log.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/log.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/main.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/main.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/mingw_socket.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/mingw_socket.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/udp.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/udp.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/udp_proto.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/network/udp_proto.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/platform_windows.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/platform_windows.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/poll.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/poll.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/sync.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/sync.cpp.obj.d"
+  "CMakeFiles/GGPO.dir/lib/ggpo/timesync.cpp.obj"
+  "CMakeFiles/GGPO.dir/lib/ggpo/timesync.cpp.obj.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/GGPO.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

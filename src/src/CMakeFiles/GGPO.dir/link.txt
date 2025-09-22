@@ -1,0 +1,3 @@
+C:\msys64\mingw32\bin\cmake.exe -E rm -f CMakeFiles\GGPO.dir/objects.a
+C:\msys64\mingw32\bin\ar.exe qc CMakeFiles\GGPO.dir/objects.a @CMakeFiles\GGPO.dir\objects1.rsp
+C:\msys64\mingw32\bin\g++.exe -v -fdiagnostics-color=always -m32 -O0 -g3 -Wpedantic -fsanitize=undefined -fsanitize-trap=all -std=c++17 -shared -o \bin\x86\Debug\libGGPO.dll -Wl,--out-implib,\lib\x86\Debug\libGGPO.dll.a -Wl,--major-image-version,1,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\GGPO.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\GGPO.dir\linkLibs.rsp
