@@ -53,29 +53,43 @@ This repository contains the code, documentation, and sample applications for th
 
 ### Windows with Visual Studio, GCC (MinGW) or Clang (LLVM)
 
-**First of all:** Install [MSYS2](https://www.msys2.org/), you will find several versions of command lines.
-Inside the MinGW64 and MinGW32 cmds install the packages "gcc", "cmake" and "make" one by one.
-You can do this by typing "pacman -S package-name" without the double quotes. The packages are:
+**First of all:**
+Install [WinLibs](https://winlibs.com/), for GCC or [LLVM-MinGW](https://github.com/mstorsjo/llvm-mingw) for MinGW-Clang.
+If you want MSVC or Clang-CL you'll need to download Visual Studio Community 2022 (or whataver newer version there is) here [VS2022](https://visualstudio.microsoft.com/free-developer-offers/).
+Both WinLibs GCC and LLVM-MinGW have 64 and 32 bit versions. From here I'll show instructions for WinLibs GCC.
 
 ```
-MinGW64: mingw-w64-x86_64-gcc, mingw-w64-x86_64-cmake and mingw-w64-x86_64-make.
+GCC 15.2.0 (with POSIX threads) + MinGW-w64 13.0.0 (UCRT)
 
-MinGW32: mingw-w64-i686-gcc, mingw-w64-i686-cmake and mingw-w64-i686-make.
+GCC 15.2.0 (with POSIX threads) + MinGW-w64 13.0.0 (MSVCRT)
+```
+
+I recommend going with the UCRT version unless you have trouble compiling the project for old machines, Windows or with old software in general.
+Always go with POSIX threads.
+
+---------------------------------------------------------------------------------------------
+
+**Second:**
+Extract your WinLibs package in C:\, and add the following folders to the PATH in Environment Variables, depending on which version you want to use for 32 or 64 bits binaries.
+
+```
+C:\root-winlibs-folder\mingw64\bin
+C:\winlibs-x64-posix-ucrt\mingw64\x86_64-w64-mingw32\include
+C:\winlibs-x64-posix-ucrt\mingw64\x86_64-w64-mingw32\lib
+
+OR
+
+C:\root-winlibs-folder\mingw32\bin
+C:\winlibs-x32-posix-ucrt\mingw32\i686-w64-mingw32\include
+C:\winlibs-x32-posix-ucrt\mingw32\i686-w64-mingw32\lib
+
 ```
 
 ---------------------------------------------------------------------------------------------
 
-**Second:** Add the folder C:\msys64\mingw32\bin or C:\msys64\mingw64\bin to the PATH in Environment Variables,
-depending on which version you want to use for 32 or 64 bits binaries.
-
----------------------------------------------------------------------------------------------
-
-Optional: You can also install the Clang official version from [LLVM](https://llvm.org/).
-
----------------------------------------------------------------------------------------------
-
-**Third:** Now, you have to choose a "generator" that will help you easily create the project files, depending on the compiler of your choice.
-Notice that Visual Studio generators are exclusively for MSVC (not to confuse it with Visual Studio Code), MinGW Makefiles allows you to use Clang and GCC (the last one from MinGW version), and Ninja allows the three compilers and it's really fast.
+**Third:**
+Now, you have to choose a "generator" that will help you easily create the project files, depending on the compiler of your choice.
+Notice that Visual Studio generators are exclusively for MSVC and Clag-CL (not to confuse it with Visual Studio Code), MinGW Makefiles allows you to use MinGW-Clang and GCC, and Ninja allows the three compilers and it's really fast.
 
 1) Borland Makefiles
 2) MSYS Makefiles
@@ -109,7 +123,6 @@ cmake --install . --config <build type>
 Notes:
 1) Vectorwar's compilation was deactivated from the main CMakeLists.txt file, because it cannot be compiled yet.
 2) The resulting files will be found at /build/installed.
-3) The MinGW version used has POSIX Threads and the MSVCRT runtime, hence why the UCRT version is not recommended.
 
 ### Linux
 
